@@ -379,6 +379,11 @@ body {
   height: 100%;
   transform: translateY(0);
 }
+@media(max-width:992px){
+  .productItem .productItem .btn-buy{
+    width: auto;
+  }
+}
 /* End Product Item Page Style */
 
 /*---------------------------
