@@ -84,6 +84,20 @@ body {
   width: 100%;
   left: 0;
 }
+.top{
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  color: var(--whait);
+  background-color: var(--mainColor);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2
+}
 /* End General Style */
 
 /*---------------------------
@@ -132,6 +146,18 @@ body {
   border-top: 2px solid var(--mainColor);
   color: var(--mainColor);
 }
+@media(max-width: 992px){
+  .navbar .nav-link {
+    text-align: center;
+  }
+  .navbar .active {
+  color: var(--mainColor) !important;
+  border: 0;
+  }
+  .navbar .nav-link::before{
+    display: none;
+  }
+}
 /* End Navbar Style */
 
 /*---------------------------
@@ -148,12 +174,22 @@ body {
 /* 3.1- Start Abuot Style */
 .content-img {
   padding: 15px;
-  background: url(../images/abuot/2.gif);
+  background: url(../images/abuot/2.gif) no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 209px;
   border-radius: 30px;
 }
-.content-img img{
+@media(max-width: 992px){
+  .content-about h2{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .content-img {
+    border-radius: 0;
+    padding: 0;
+    background-size: contain;
+
+  }
 }
 /* 3.1- Start Prand Style */
 .prand .box-slider {
@@ -385,19 +421,22 @@ body {
   display: block;
   margin: auto;
 }
-
 .mapouter {
   position: relative;
   text-align: right;
   height: 350px;
   width: 100%;
 }
-
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
   height: 100%;
   width: 100%;
+}
+@media(max-width: 992px){
+  .contact .content-contact {
+    grid-template-columns: 1fr ;
+  }
 }
 /* End Contact Page Style */
 
@@ -425,7 +464,8 @@ footer .sochial a {
   font-size: 20px;
 }
 footer .foot-gallry{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin: 0;
 }
 footer .foot-gallry img{
@@ -435,5 +475,16 @@ footer .foot-gallry img{
 .copy {
   background-color: var(--mainColor);
   color: var(--whait);
+}
+@media(max-width: 992px){
+  footer{
+    text-align: center;
+  }
+  footer .foot-gallry{
+  grid-template-columns: repeat(2, 1fr);
+  }
+  footer .foot-links li {
+    margin-bottom: 50px;
+  }
 }
 /* End Footer Style */
