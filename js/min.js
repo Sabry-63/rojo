@@ -5,7 +5,7 @@ $(function() {
   // Auto Height Heaer
   const winH = $(window).height(),
     nav = $(".navbar").innerHeight();
-  $(".header").height(winH -  nav);
+  $(".header").height(winH - nav);
   //Add Class Show For Section && Add Class Active For Nav Link
   $(".nav-link").click(function(e) {
     e.preventDefault();
@@ -17,6 +17,33 @@ $(function() {
       .removeClass("active");
     $(".parent-page").hide();
     $($(this).data("show")).fadeIn(400);
+  });
+  // Add Class Fiexd To Navbar
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > winH) {
+      // Checed Class
+      if ($(".navbar").hasClass !== "fixed-top") {
+        $(".navbar").addClass("fixed-top");
+      }
+    } else {
+      $(".navbar").removeClass("fixed-top");
+    }
+
+    // Go TO Up
+    if ($(window).scrollTop() > $(".prand").offset().top) {
+      $(".top").fadeIn(300);
+    } else {
+      $(".top").fadeOut(300);
+    }
+  });
+  // Goto Up
+  $(".top").click(function() {
+    $("html, body").animate(
+      {
+        scrollTop: 0
+      },
+      1000
+    );
   });
 
   //Add Class Show For Section && Add Class Select For Fillter
@@ -71,13 +98,17 @@ $(function() {
   });
 
   // Contcat Now Buy Order
-  $('.btn-buy').click(function(e) {
+  $(".btn-buy").click(function(e) {
     e.preventDefault();
     $("#productItem").hide();
-    $('.contact').fadeIn();
-    $('.nav-link').parent().siblings().children().removeClass('active');
-    $('.contact-link').addClass('active'); 
-  })
+    $(".contact").fadeIn();
+    $(".nav-link")
+      .parent()
+      .siblings()
+      .children()
+      .removeClass("active");
+    $(".contact-link").addClass("active");
+  });
   // Go to Top Click
   $(".to_top").click(function() {
     $("html, body").animate(
