@@ -133,6 +133,13 @@ $(function() {
     ) {
       $(".fillter-tab.mac").addClass("selected");
     }
+    
+    $(".nav-link")
+      .parent()
+      .siblings()
+      .children()
+      .removeClass("active");
+    $(".product-link").addClass("active");
   });
 
   // Goto Up
