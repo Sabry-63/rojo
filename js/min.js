@@ -17,6 +17,12 @@ $(function() {
       .removeClass("active");
     $(".parent-page").hide();
     $($(this).data("show")).fadeIn(400);
+    $("html, body").animate(
+      {
+        scrollTop: 0
+      },
+      1000
+    );
   });
   // Add Class Fiexd To Navbar
   $(window).scroll(function() {
