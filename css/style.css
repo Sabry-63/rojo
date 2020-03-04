@@ -2,7 +2,13 @@
   1- Start General Style
   2- Start Navbar Style
   3- Start Home Page Style 
+    3.0- Start Header Style
     3.1- Start Abuot Style 
+    3.2- Start Prand Style
+  4- Start Products Page Style
+  5- Start Product Item Page Style
+  6- Start Contact Page Style
+  7- Start Footer Style
 */
 /*---------------------------
 1- Start General Style */
@@ -86,7 +92,7 @@ body {
 }
 .top{
   position: fixed;
-  right: 30px;
+  right: 10px;
   bottom: 60px;
   color: var(--whait);
   background-color: var(--mainColor);
@@ -102,10 +108,6 @@ body {
 @media(max-width: 992px){
   .p-text{
     text-align: center;
-  }
-  .top{
-    right: 10px;
-    bottom: 70px;
   }
 }
 /* End General Style */
@@ -172,7 +174,7 @@ body {
 
 /*---------------------------
 3- Start Home Page Style */
-/* */
+/* 3.0 Start Header Style*/
 .header{
   background:linear-gradient(rgba(0,0,0, .2),rgba(0,0,0,.2)) ,
   url('../images/header/head.jpg');
@@ -201,7 +203,7 @@ body {
 
   }
 }
-/* 3.1- Start Prand Style */
+/* 3.2- Start Prand Style */
 .prand .box-slider {
   background-size: cover;
   margin-top: 20px;
@@ -399,7 +401,7 @@ body {
 /* End Product Item Page Style */
 
 /*---------------------------
-- Start Contact Page Style */
+6- Start Contact Page Style */
 .contact .content-contact {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -458,7 +460,7 @@ body {
 /* End Contact Page Style */
 
 /*---------------------------
-- Start Footer Style */
+7- Start Footer Style */
 footer {
   background-color: var(--black);
   color: var(--whait);
@@ -498,10 +500,8 @@ footer .foot-gallry img{
     text-align: center;
   }
   footer .foot-gallry{
-  grid-template-columns: repeat(2, 1fr);
-  }
-  footer .foot-links li {
-    margin-bottom: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
   }
 }
 /* End Footer Style */
