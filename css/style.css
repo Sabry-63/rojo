@@ -485,11 +485,11 @@ footer .sochial a {
 footer .foot-gallry{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
   margin: 0;
 }
 footer .foot-gallry img{
-  width: 60px;
-  margin: 0 10px;
+  width: 100%;
 }
 .copy {
   background-color: var(--mainColor);
@@ -498,10 +498,6 @@ footer .foot-gallry img{
 @media(max-width: 992px){
   footer{
     text-align: center;
-  }
-  footer .foot-gallry{
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
   }
 }
 /* End Footer Style */
