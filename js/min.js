@@ -36,15 +36,6 @@ $(function() {
       $(".top").fadeOut(300);
     }
   });
-  // Goto Up
-  $(".top").click(function() {
-    $("html, body").animate(
-      {
-        scrollTop: 0
-      },
-      1000
-    );
-  });
 
   //Add Class Show For Section && Add Class Select For Fillter
   $(".fillter-tab").click(function(e) {
@@ -109,17 +100,42 @@ $(function() {
       .removeClass("active");
     $(".contact-link").addClass("active");
   });
-  // Go to Top Click
-  $(".to_top").click(function() {
+
+  $(".foot-link").click(function(e) {
+    e.preventDefault();
+  });
+
+  // Goto Products
+  $(".prand-show").click(function() {
+    $(".home").hide();
+    $(".products").fadeIn();
+    $(".fillter-tab")
+      .parent()
+      .siblings()
+      .children()
+      .removeClass("selected");
+    if (
+      $(this)
+        .parent()
+        .hasClass("prand-1")
+    ) {
+      $(".fillter-tab.nars").addClass("selected");
+    } else if (
+      $(this)
+        .parent()
+        .hasClass("prand-2")
+    ) {
+      $(".fillter-tab.mac").addClass("selected");
+    }
+  });
+
+  // Goto Up
+  $(".top , .scroll-top-page").click(function() {
     $("html, body").animate(
       {
         scrollTop: 0
       },
       1000
     );
-  });
-
-  $(".foot-link").click(function(e) {
-    e.preventDefault();
   });
 });
